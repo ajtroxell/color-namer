@@ -1,0 +1,17 @@
+.quiz {
+  border: 1px solid gray;
+  .question {
+    display: none;
+    &:first-child {
+      display: block;
+    }
+  }
+  .results {
+    display: none;
+    .high-risk,
+    .low-risk,
+    .no-risk {
+      display: none;
+    }
+  }
+}

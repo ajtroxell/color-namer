@@ -1,0 +1,117 @@
+.accordions {
+  margin-bottom: 20px;
+  .accordion-title {
+    position: relative;
+
+    min-height: 45px;
+    margin: 20px 0 0;
+    padding: 15px 45px 15px 0;
+
+    color: gray;
+    border-bottom: 1px solid gray;
+
+    @include font-size(15, 17);
+    &:hover {
+      cursor: pointer;
+
+      color: black;
+      border-bottom: 1px solid black;
+      span {
+        border-left: 1px solid black;
+        &:after {
+          color: black;
+        }
+      }
+    }
+    &:first-of-type {
+      margin-top: 0;
+    }
+    &.is-active {
+      margin-bottom: 10px;
+
+      border-bottom: 1px black;
+      button {
+        color: black;
+
+        font-weight: 500;
+        &:focus {
+          top: 1px;
+
+          border-bottom: 1px black;
+
+          font-weight: 500;
+        }
+      }
+      span {
+        border-left: 1px gray;
+        &:after {
+          content: '\f077';
+
+          color: gray;
+        }
+      }
+    }
+    button {
+      position: absolute;
+      top: 0;
+
+      display: block;
+
+      width: 100%;
+      height: 100%;
+
+      text-align: left;
+
+      color: black;
+      &:focus {
+        border-bottom: 1px solid black;
+        outline: 0;
+      }
+    }
+    span {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      width: 45px;
+      height: 100%;
+
+      border-left: 1px solid gray;
+      &:after {
+        position: absolute;
+        top: 50%;
+        left: 14px;
+
+        width: 15px;
+        height: 17px;
+
+        content: '\f078';
+        transform: translateY(-8px);
+        text-align: center;
+        text-decoration: inherit;
+
+        color: gray;
+
+        font-family: FontAwesome;
+        font-weight: normal;
+        font-style: normal;
+      }
+    }
+  }
+  .accordion-title+[aria-hidden] {
+    display: none;
+  }
+  .accordion-title+[aria-hidden='false'] {
+    display: block;
+  }
+  .accordion-content {
+    margin-top: 10px;
+    padding: 20px;
+
+    color: black;
+
+    font-weight: 300;
+
+    @include font-size(15, 18);
+  }
+}

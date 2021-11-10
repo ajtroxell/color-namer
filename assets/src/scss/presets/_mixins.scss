@@ -1,0 +1,266 @@
+// pixel to rem
+// @include rem-calc(10px 10px 10px 10px);
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@function rem-calc($values, $base: $base-font-size) {
+  $rem-values: ();
+  $count: length($values);
+
+  @if $base == null {
+    $base: 100%;
+  }
+
+  @if unit($base) == '%' {
+    $base: ($base / 100%) * 16px;
+  }
+
+  @if $count == 1 {
+    @return -ws-to-rem($values, $base);
+  }
+
+  @for $i from 1 through $count {
+    $rem-values: append($rem-values, -ws-to-rem(nth($values, $i), $base));
+  }
+
+  @return $rem-values;
+}
+
+@function -ws-to-rem($value, $base: null) {
+  @if type-of($value) != 'number' {
+    @warn inspect($value)+"was passed to rem-calc(), which is not a number.";
+
+    @return $value;
+  }
+
+  @if unit($value) != 'rem' {
+    $value: strip-unit($value) / strip-unit($base) * 1rem;
+  }
+
+  @if $value == 0rem {
+    $value: 0;
+  }
+
+  @return $value;
+}
+
+// transition mixin
+// @include transition(all, 0.2s, ease);
+@mixin transition($value) {
+  transition: $value;
+}
+
+// input placeholders
+// @include placeholder {}
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+// viewport width based font size and line height
+// viewport width, font-size, line-height
+// @include vwfontsize(640px 16px); OR @include fontsize(640px 16px 24px);
+@mixin vwfontsize($value) {
+  $viewportwidth: nth($value, 1);
+  $vw_value: ($viewportwidth * 0.01) * 1;
+  $fontsize: (nth($value, 2) / $vw_value)+vw;
+  $lineheight: $fontsize;
+
+  @if length($value) > 2 {
+    $fontsize: (nth($value, 2) / $vw_value)+vw;
+    $lineheight: (nth($value, 3) / $vw_value)+vw;
+  } @else {
+    $fontsize: (nth($value, 2) / $vw_value)+vw;
+    $lineheight: nth($value, 2) * 1.5;
+  }
+  font-size: $fontsize;
+  line-height: $lineheight;
+}
+
+// px to rem font size and line height
+// @include fontsize(45); OR @include fontsize(45 45);
+@mixin fontsize($size) {
+  $fontsize: nth($size, 1);
+  $lineheight: $fontsize;
+
+  @if length($size) > 1 {
+    $lineheight: nth($size, 2);
+  } @else {
+    $lineheight: nth($size, 1) * 1.5;
+  }
+  font-size: $fontsize / 16+rem;
+  line-height: $lineheight / 16+rem;
+}
+
+// media query shorthand
+@mixin mq($query) {
+  @if length($query) == 1 {
+    $query1: nth($query, 1);
+
+    @if $query1 == 'portrait' {
+      @media screen and (orientation: portrait) {
+        @content;
+      }
+    }
+
+    @elseif $query1=='landscape' {
+      @media screen and (orientation: landscape) {
+        @content;
+      }
+    } @else {
+      @media screen and (min-width: $query1 + px) {
+        @content;
+      }
+    }
+  }
+
+  @elseif length($query)==2 {
+    $query1: nth($query, 1);
+    $query2: nth($query, 2);
+
+    @if $query2 == 'portrait' {
+      @media screen and (min-width: $query1 + px) and (orientation: portrait) {
+        @content;
+      }
+    }
+
+    @elseif $query2=='landscape' {
+      @media screen and (min-width: $query1 + px) and (orientation: landscape) {
+        @content;
+      }
+    } @else {
+      @media screen and (min-width: $query1 + px) and (max-width: $query2 - 1 + px) {
+        @content;
+      }
+    }
+  }
+
+  @elseif length($query)==3 {
+    $query1: nth($query, 1);
+    $query2: nth($query, 2);
+    $query3: nth($query, 3);
+
+    @if $query3 == 'portrait' {
+      @media screen and (min-width: $query1 + px) and (max-width: $query2 - 1 + px) and (orientation: portrait) {
+        @content;
+      }
+    }
+
+    @elseif $query3=='landscape' {
+      @media screen and (min-width: $query1 + px) and (max-width: $query2 - 1 + px) and (orientation: landscape) {
+        @content;
+      }
+    } @else {
+      @media screen and (min-width: $query1 + px) and (max-width: $query2 + px) {
+        @content;
+      }
+    }
+  }
+}
+
+// default media queries
+@mixin small-only {
+  @media (max-width: #{$medium - 1px}) {
+    @content;
+  }
+}
+
+@mixin small-only {
+  @media (min-width: 0) and (max-width: #{$medium - 1px}) {
+    @content;
+  }
+}
+
+@mixin medium-up {
+  @media (min-width: #{$medium}) {
+    @content;
+  }
+}
+
+@mixin medium-only {
+  @media (min-width: #{$medium}) and (max-width: #{$large - 1px}) {
+    @content;
+  }
+}
+
+@mixin large-up {
+  @media (min-width: #{$large}) {
+    @content;
+  }
+}
+
+@mixin large-only {
+  @media (min-width: #{$large}) and (max-width: #{$xlarge - 1px}) {
+    @content;
+  }
+}
+
+@mixin xlarge-up {
+  @media (min-width: #{$xlarge}) {
+    @content;
+  }
+}
+
+@mixin xlarge-only {
+  @media (min-width: #{$xlarge}) and (max-width: #{$xxlarge - 1px}) {
+    @content;
+  }
+}
+
+@mixin xxlarge-up {
+  @media (min-width: #{$xxlarge}) {
+    @content;
+  }
+}
+
+@mixin portrait {
+  @media (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin landscape {
+  @media (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and ( min--moz-device-pixel-ratio: 2), only screen and ( -o-min-device-pixel-ratio: 2/1), only screen and ( min-device-pixel-ratio: 2), only screen and ( min-resolution: 192dpi), only screen and ( min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+@mixin offscreen {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+@mixin sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  color: black;
+  background: white;
+}

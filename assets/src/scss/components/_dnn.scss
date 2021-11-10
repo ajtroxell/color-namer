@@ -1,0 +1,54 @@
+#ControlBar,
+#ControlBar:before,
+#ControlBar:after,
+#ControlBar *:before,
+#ControlBar *:after,
+#ControlBar li,
+#ControlBar li:before,
+#ControlBar li:after,
+#ControlBar a,
+#ControlBar a:before,
+#ControlBar a:after,
+.dnn_mact,
+.dnn_mact:before,
+.dnn_mact:after,
+.dnn_mact *:before,
+.dnn_mact *:after,
+.dnn_mact li,
+.dnn_mact li:before,
+.dnn_mact li:after {
+  box-sizing: content-box !important;
+}
+
+#ControlBar .ControlContainer {
+  box-sizing: border-box !important;
+  width: 100%;
+  padding: rem-calc(0 15px);
+}
+
+.RadComboBox_DnnBlack table {
+  border: none;
+}
+
+.actionMenu .dnn_mact {
+  margin-top: rem-calc(-54px) !important;
+}
+
+.dnnEditState .DNNModuleContent textarea {
+  min-height: 400px; // color: black;
+}
+
+ul.dnnActions {
+  margin: rem-calc(0 0 20px 0) !important;
+}
+
+.dnnEditState .redactor-box .redactor-editor {
+  height: 100vh !important;
+  max-height: 1000px !important;
+}
+
+#ControlActionMenu>li>a,
+#ControlEditPageMenu>li>a,
+#ControlNav>li>a {
+  height: 33px !important;
+}

@@ -1,0 +1,568 @@
+#mainbody {
+  padding: 0 32px;
+  font-size: 0.9em;
+}
+
+#mainbody h1 {
+  font-size: 1.44em;
+  padding: 0.25em 0;
+}
+
+#mainbody h1 span.prev,
+#mainbody h1 span.next {
+  position: absolute;
+  background: #e8e8e8;
+  font-size: 0.5em;
+  padding: 0.5em 0;
+  width: 8em;
+  text-align: center;
+}
+
+#mainbody h1 span.prev a,
+#mainbody h1 span.next a,
+#mainbody h1 span.prev a:hover,
+#mainbody h1 span.next a:hover {
+  border: 0;
+}
+
+#mainbody h1 span.prev {
+  right: 12em;
+}
+
+#mainbody h1 span.next {
+  right: 32px;
+}
+
+#mainbody h2 {
+  font-size: 1.2em;
+  padding: 0.5em 0 0.1em 0;
+}
+
+#mainbody h2.blogheader {
+  padding-left: 0.5em;
+}
+
+#mainbody h2 a.blogdatetime,
+#mainbody h2 a.editblog,
+#mainbody #sidebar h2 a {
+  font-size: 0.85em;
+  cursor: pointer;
+  border: 0;
+}
+
+#mainbody h2 a.blogdatetime:hover,
+#mainbody h2 a.editblog:hover,
+#mainbody #sidebar h2 a:hover {
+  cursor: pointer;
+  border: 0;
+}
+
+#mainbody h2.blogtitle {
+  margin-bottom: 0.5em;
+}
+
+#mainbody h2.blogtitle span {
+  display: block;
+  margin-bottom: 0.5em;
+  font-size: 1.2em;
+}
+
+#mainbody h2.blogtitle a.blogdatetime,
+#mainbody h2.blogtitle a.editblog {
+  color: #999;
+  padding-left: 0.1em;
+  font-size: 0.65em;
+}
+
+#mainbody h3 {
+  font-size: 1em;
+  padding: 0.75em 0 0.5em 0;
+}
+
+#mainbody hr {
+  margin: 1em 0;
+  height: 1px;
+  border: 0;
+  border-bottom: 1px dashed #777;
+}
+
+#mainbody a,
+#mainbody a * {
+  color: #777;
+  text-decoration: none;
+  border-bottom: 1px dashed #777;
+}
+
+#mainbody a:hover,
+#mainbody a:hover * {
+  color: #0b63b5;
+  border-bottom: 1px solid #0b63b5;
+}
+
+#mainbody #crumbs {
+  position: relative;
+  margin-top: -1em;
+  line-height: 1em;
+  height: 2em;
+}
+
+#mainbody #crumbs a,
+#crumbs a:hover {
+  border: 0;
+}
+
+#mainbody #prevnext {
+  height: 2.5em;
+  margin-top: -2.5em;
+}
+
+#mainbody #prevnext span.prev2,
+#mainbody #prevnext span.prev,
+#mainbody #prevnext span.next {
+  position: absolute;
+  background: #e8e8e8;
+  padding: 0.5em 0;
+  width: 8em;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+#mainbody #prevnext span.prev2 a,
+#mainbody #prevnext span.prev a,
+#mainbody #prevnext span.next a,
+#mainbody #prevnext span.prev2 a:hover,
+#mainbody #prevnext span.prev a:hover,
+#mainbody #prevnext span.next a:hover {
+  border: 0;
+}
+
+#mainbody #prevnext span.prev2 {
+  right: 20em;
+}
+
+#mainbody #prevnext span.prev {
+  right: 11em;
+}
+
+#mainbody #prevnext span.next {
+  right: 2em;
+}
+
+#mainbody p,
+#mainbody ul,
+#mainbody ol {
+  line-height: 1.6em;
+}
+
+#mainbody ul,
+#mainbody ol {
+  margin: 0.5em 0 1em 24px;
+}
+
+#mainbody ul {
+  list-style: square;
+}
+
+#mainbody ul li,
+#mainbody ol li {
+  padding: 0.1em 0;
+}
+
+#mainbody ul.multiline li,
+#mainbody ol.multiline li {
+  padding: 0.6em 0;
+}
+
+#mainbody ul.lyrics {
+  list-style: none;
+}
+
+#mainbody ul.lyrics li {
+  position: relative;
+  border-bottom: 1px dashed #777;
+  padding: 0.35em 0;
+}
+
+#mainbody ul.lyrics li span.song {
+  left: 0;
+}
+
+#mainbody ul.lyrics li span.by {
+  position: absolute;
+  left: 19em;
+}
+
+#mainbody ul.lyrics li span.from {
+  position: absolute;
+  left: 38em;
+}
+
+#mainbody ul.lyrics li a,
+#mainbody ul.lyrics li a:hover {
+  border: 0;
+}
+
+#mainbody ul.search {
+  list-style: none;
+}
+
+#mainbody ul.search li {
+  position: relative;
+  padding: 0.5em 0;
+}
+
+#mainbody ul.search li {
+  margin-bottom: 0.5em;
+}
+
+#mainbody ul.search li span.caption {
+  left: 0;
+  padding: .25em 0;
+}
+
+#mainbody ul.search li span.field {
+  position: absolute;
+  left: 17em;
+}
+
+#mainbody ul.search .inputbox {
+  width: 20em;
+}
+
+#mainbody ul.search .cmdbutton {
+  position: relative;
+  left: 10em;
+  width: 10em;
+}
+
+#mainbody ul.twist li a,
+#mainbody ul.twist li a:hover {
+  border: 0;
+}
+
+#mainbody ul.twist {
+  list-style: none;
+}
+
+#mainbody ul.twist li {
+  position: relative;
+  border-bottom: 1px dashed #777;
+  padding: 0.35em 0;
+}
+
+#mainbody ul.twist li span {
+  position: relative;
+}
+
+#mainbody ul.twist li a {
+  position: absolute;
+  left: 110px;
+  width: 650px;
+}
+
+#mainbody ul.twist li a,
+#mainbody ul.twist li a:hover {
+  border: 0;
+}
+
+#mainbody div#dnew {
+  position: absolute;
+  top: 82px;
+  left: 32px;
+}
+
+#mainbody div#dchi {
+  position: absolute;
+  top: 115px;
+  left: 32px;
+}
+
+#mainbody div.newy a,
+#mainbody div.newy a:hover,
+#mainbody div.newy a *,
+#mainbody div.newy a:hover * {
+  border: 0;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#mainbody div.newy a {
+  position: relative;
+  float: left;
+  display: block;
+  margin-right: 11px;
+  width: 160px;
+  font-size: 11px;
+  background: #e8e8e8;
+}
+
+#mainbody div.newy img {
+  position: absolute;
+  left: 0;
+}
+
+#mainbody div.newy a div {
+  position: relative;
+  left: 37px;
+  top: 4px;
+  height: 24px;
+}
+
+#mainbody div.blogblock {
+  position: relative;
+  padding: 0.5em 0.5em 0 0.1em;
+  margin-bottom: 2em;
+  border-bottom: 2px solid #ddd;
+}
+
+#mainbody div.blogfront {
+  padding-right: 1em;
+  margin-right: 300px;
+  border-right: 1px solid #ddd;
+}
+
+#mainbody div.blogblock p {
+  line-height: 1.9em;
+}
+
+#mainbody div.blogblock span.blogtime {
+  position: absolute;
+  z-index: 1;
+  line-height: 2.1em;
+}
+
+#mainbody div.blogblock span.blogtime,
+#mainbody div.blogblock span.blogtime a {
+  border: 0;
+}
+
+#mainbody div.blogblock span.blogtime a:hover {
+  border: 0;
+}
+
+#mainbody div.blogblock p.blogtext {
+  position: relative;
+  padding-left: 1.5em;
+  padding-bottom: 1.25em;
+  font-size: 1.1em;
+}
+
+#mainbody div.blogblock p.blogtext,
+#mainbody div.blogblock p.blogtext * {
+  font-family: georgia, "trebuchet ms", tahoma, helvetica, sans-serif;
+}
+
+#mainbody div.blogblock p.blogcom {
+  text-align: right;
+  margin-bottom: 1em;
+}
+
+#mainbody div.blogblock p.blogcom a {
+  border: 1px solid #bbb;
+  border-radius: 2px;
+  background: #eee;
+  padding: 6px 8px;
+  font-size: 10px;
+}
+
+#mainbody div.blogblock p.blogcom a:hover {
+  background: #f4f4f4;
+  border: 1px solid #99b;
+}
+
+#mainbody #dsq-comments-title,
+#mainbody .dsq-options,
+#mainbody .dsq-like,
+#mainbody .dsq-dc-logo {
+  display: none;
+}
+
+#mainbody .dsq-global-toolbar-likes {
+  visibility: hidden;
+}
+
+#mainbody .dsq-by a {
+  color: #fff;
+  border: 0;
+}
+
+#mainbody div.blogblock ul,
+#mainbody div.blogblock ol {
+  position: relative;
+  padding: 0 0 0.7em 3em;
+  margin: 0;
+}
+
+#mainbody div.blogblock ul li {
+  padding-bottom: 0.6em;
+}
+
+#mainbody div.blogblock ol li {
+  padding-bottom: 1em;
+}
+
+#mainbody #sidebar {
+  float: right;
+  width: 280px;
+  margin-top: 32px;
+}
+
+#mainbody #sidebar hr {
+  border-bottom: 1px solid #ddd;
+}
+
+#mainbody #sidebar h1 {
+  font-size: 1.25em;
+}
+
+#mainbody #sidebar h2 {
+  margin-bottom: 0.25em;
+}
+
+#mainbody #sidebar h2 a {
+  font-size: 0.75em;
+}
+
+#mainbody #sidebar p {
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
+
+#mainbody #sidebar p#info {
+  font-size: 0.8em;
+  color: #777;
+}
+
+#mainbody #sidebar p.title {
+  margin-bottom: 0.5em;
+}
+
+#mainbody #sidebar a.photo {
+  border: 0;
+}
+
+#mainbody #sidebar a img {
+  border: 4px solid #ccc;
+}
+
+#mainbody #sidebar a:hover img {
+  border: 4px solid #0b63b5;
+}
+
+#mainbody .picthumb {
+  max-width: 300px;
+  max-height: 300px;
+}
+
+#mainbody .picframe,
+#mainbody a.piclink img,
+#mainbody a.piclink:hover img {
+  margin: 16px 36px 16px 2px;
+}
+
+#mainbody a.picmid img,
+#mainbody a.picmid:hover img {
+  margin: 16px;
+}
+
+#mainbody .picframe,
+#mainbody a.piclink img,
+#mainbody a.piclink:hover img,
+#mainbody a.picmid img,
+#mainbody a.picmid:hover img {
+  border: 4px solid #ccc;
+}
+
+#mainbody a.piclink,
+#mainbody a.piclink:hover,
+#mainbody a.picmid,
+#mainbody a.picmid:hover {
+  border: 0;
+}
+
+#mainbody a.piclink:hover img,
+#mainbody a.picmid:hover img {
+  border: 4px solid #333;
+}
+
+#mainbody .searchword,
+#mainbody a:hover .searchword {
+  background: #ccee84;
+  color: #1c1912;
+}
+
+#mainbody .inputbox {
+  border: 1px solid #aaa;
+  border-left: 4px solid #aaa;
+  background-color: #eee;
+  font-size: 1em;
+  font-weight: normal;
+  padding: 0.125em 0.25em;
+  height: 1.75em;
+}
+
+#mainbody .cmdbutton {
+  border: 1px solid #777;
+  border-right: 4px solid #777;
+  color: #fff;
+  background-color: #aaa;
+  padding: 0.3em;
+  font-size: 1em;
+  font-weight: normal;
+}
+
+#mainbody #projects {
+  width: 850px;
+}
+
+#mainbody #projects a.piclink img,
+#mainbody #projects a.piclink:hover img {
+  margin: 12px 10px 18px 2px;
+}
+
+#mainbody #projects h2 {
+  border-bottom: 1px solid #ddd;
+}
+
+#mainbody #projects h2 a {
+  border: 0;
+}
+
+#mainbody #projects span {
+  margin-top: -22px;
+  margin-right: 2px;
+  float: right;
+  font-size: 0.75em;
+  color: #2b5381;
+}
+
+#mainbody #projects p {
+  margin: 4px 0 12px 20px;
+  font-size: 0.9em;
+}
+
+#mainbody .codeblock {
+  background-color: #f7f7e7;
+  color: #554433;
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  border: 1px dotted #aa4444;
+}
+
+#mainbody pre {
+  padding: 10px;
+}
+
+#mainbody .blogblock pre {
+  margin-left: 24px;
+}
+
+#mainbody .blogblock .codeblock {
+  padding: 10px;
+  color: #620;
+}
+
+#mainbody .blogblock .codeblock * {
+  color: #620;
+}

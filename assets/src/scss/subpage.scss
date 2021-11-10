@@ -1,0 +1,27 @@
+/*!
+* WS Starter
+* Designed by LRS Web Solutions (http://lrswebsolutions.com)
+* Visit http://lrswebsolutions.com
+*/
+
+// Presets & Variables
+@import 'presets/variables';
+@import 'presets/mixins';
+// Additional Presets & Variables
+@import 'presets/grid-settings';
+@import 'presets/helper-classes';
+// Layout
+@import 'layout/sidebar';
+// Vendor
+@import 'vendor/accordions';
+@import 'vendor/tabs';
+@import 'vendor/responsive-videos';
+// Components
+@import 'components/images';
+//@import 'components/forms';
+//@import 'components/accordions';
+//@import 'components/tabs';
+@import 'components/quiz';
+// Vendor
+// Extras
+@import 'components/shame';

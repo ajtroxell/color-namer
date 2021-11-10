@@ -1,0 +1,135 @@
+{
+  "Rem Calc": {
+    "prefix": "rc",
+    "body": [
+      "rem-calc($1);$2"
+    ],
+    "description": "Automatically converts any pixel values to rem values."
+  },
+  "Import": {
+    "prefix": "im",
+    "body": [
+      "@import '$1/$2';"
+    ],
+    "description": "Inserts assets path function."
+  },
+  "Font Size & Line Height": {
+    "prefix": "fs",
+    "body": [
+      "@include fontsize($1);$2"
+    ],
+    "description": "Automatically convert pixel based font-size and line-height to rem based. A single value creates a font of that size in rems and a line-height of 1.5 times that value. Two values creates font-size and line-height of specified values."
+  },
+  "VW Font Size & Line Height": {
+    "prefix": "vfs",
+    "body": [
+      "@include vwfontsize(${1: viewport} ${2: font-size} ${3: line-height});$4"
+    ],
+    "description": "Automatically convert pixel based font-size and line-height to viewport width based."
+  },
+  "Input Placeholder": {
+    "prefix": "ph",
+    "body": [
+      "@include placeholder {$1}$2"
+    ],
+    "description": "Styled within are applied to the CSS placeholder pseudo-elements."
+  },
+  "Media Query Small Only": {
+    "prefix": "smo",
+    "body": [
+      "@include small-only {$1}"
+    ],
+    "description": "Insert small only."
+  },
+  "Media Query Medium Only": {
+    "prefix": "mdo",
+    "body": [
+      "@include medium-only {$1}"
+    ],
+    "description": "Insert medium only."
+  },
+  "Media Query Large Only": {
+    "prefix": "lgo",
+    "body": [
+      "@include large-only {$1}"
+    ],
+    "description": "Insert large only."
+  },
+  "Media Query X-Large Only": {
+    "prefix": "xlgo",
+    "body": [
+      "@include xlarge-only {$1}"
+    ],
+    "description": "Insert x-large only."
+  },
+  "Media Query Medium Up": {
+    "prefix": "mdu",
+    "body": [
+      "@include medium-up {$1}"
+    ],
+    "description": "Insert medium up."
+  },
+  "Media Query Large Up": {
+    "prefix": "lgu",
+    "body": [
+      "@include large-up {$1}"
+    ],
+    "description": "Insert large up."
+  },
+  "Media Query X-Large Up": {
+    "prefix": "xlgu",
+    "body": [
+      "@include xlarge-up {$1}"
+    ],
+    "description": "Insert x-large up."
+  },
+  "Media Query XX-Large Up": {
+    "prefix": "xxlgo",
+    "body": [
+      "@include xxlarge-up {$1}"
+    ],
+    "description": "Insert xx-large up."
+  },
+  "Media Query Portrait": {
+    "prefix": "portrait",
+    "body": [
+      "@include portrait {$1}"
+    ],
+    "description": "Insert portrait."
+  },
+  "Media Query Landscape": {
+    "prefix": "landscape",
+    "body": [
+      "@include landscape {$1}"
+    ],
+    "description": "Insert landscape."
+  },
+  "Media Query Retina": {
+    "prefix": "retina",
+    "body": [
+      "@include retina {$1}"
+    ],
+    "description": "Insert retina."
+  },
+  "Transition": {
+    "prefix": "transition",
+    "body": [
+      "@include transition(${1: property} ${2: duration} ${3: transition});"
+    ],
+    "description": "CSS Transition."
+  },
+  "Offscreen": {
+    "prefix": "offscreen",
+    "body": [
+      "@include offscreen;$1"
+    ],
+    "description": "Forces element off-screen."
+  },
+  "Screenreaders Only": {
+    "prefix": "sr",
+    "body": [
+      "@include sr-only;$1"
+    ],
+    "description": "Forces element to show only for screen readers."
+  }
+}

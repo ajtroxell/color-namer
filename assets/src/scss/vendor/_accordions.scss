@@ -1,0 +1,111 @@
+.accordions {
+  margin-bottom: 20px;
+
+  .accordion-title {
+    position: relative;
+
+    button {
+      position: relative;
+      width: 100%;
+      margin: rem-calc(0 0 10px 0);
+      padding: rem-calc(20px 82px 10px 0);
+      text-align: left;
+      color: black;
+      border: 0;
+      border-bottom: 2px solid gray;
+      background: transparent;
+      font-weight: 700;
+      @include fontsize(15 18);
+
+      &:before {
+        position: absolute;
+        right: rem-calc(80px);
+        bottom: -2px;
+        width: 2px;
+        height: 2px;
+        content: '';
+        background: white;
+      }
+
+      span {
+        position: absolute;
+        right: 0;
+        bottom: -2px;
+        width: rem-calc(80px);
+        height: calc(100% + 2px);
+        border-bottom: 2px solid gray;
+
+        &:after {
+          position: absolute;
+          top: 50%;
+          left: rem-calc(32px);
+          content: '\f067';
+          transform: translateY(-8px);
+          text-align: center;
+          text-decoration: inherit;
+          color: black;
+          font-family: FontAwesome;
+          font-size: rem-calc(18px);
+          font-weight: normal;
+          font-style: normal;
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:hover,
+      &:focus {
+        color: blue;
+        border: 0;
+        border-bottom: 2px solid gray;
+        outline: 0;
+        background: transparent;
+
+        span {
+          border-bottom: 2px solid gray;
+        }
+      }
+    }
+
+    &.is-active button,
+    &.is-active button:focus {
+      color: blue;
+      border: 0;
+      border-bottom: 2px solid gray;
+      outline: 0;
+      background: transparent;
+
+      span {
+        border-bottom: 2px solid gray;
+
+        &:after {
+          content: '\f068';
+        }
+      }
+    }
+  }
+
+  .accordion-content[aria-hidden] {
+    display: none;
+  }
+
+  .accordion-content[aria-hidden='false'] {
+    display: block;
+  }
+
+  &.active {
+    h2 {
+      margin: 0;
+    }
+
+    .accordion-content {
+      margin-top: 10px;
+      padding: 20px;
+      color: black;
+      font-weight: 300;
+      @include fontsize(15 18);
+    }
+  }
+}

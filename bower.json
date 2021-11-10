@@ -1,0 +1,25 @@
+{
+  "name": "ws-starter",
+  "version": "3.0.0",
+  "private": "true",
+  "dependencies": {
+    "normalize-css": "latest",
+    "jquery-validation": "latest",
+    "jquery.ui": "latest",
+    "enquire": "latest",
+    "tablesaw": "latest",
+    "magnific-popup": "latest",
+    "remodal": "latest",
+    "twitter-fetcher": "latest",
+    "cycle2": "https://github.com/malsup/cycle2.git",
+    "bootstrap": "^3.3.6",
+    "fluidvids": "https://github.com/toddmotto/fluidvids.git",
+    "touchswipe": "https://github.com/mattbryson/TouchSwipe-Jquery-Plugin.git"
+  },
+  "install": {
+    "path": {
+      "css": "assets/src/scss/vendor",
+      "js": "assets/src/js/vendor"
+    }
+  }
+}

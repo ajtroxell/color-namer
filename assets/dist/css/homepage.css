@@ -1,0 +1,201 @@
+/*!
+* WS Starter
+* Designed by LRS Web Solutions (http://lrswebsolutions.com)
+* Visit http://lrswebsolutions.com
+*/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  color: black;
+  background: white; }
+
+.offscreen {
+  position: absolute;
+  top: -9999px;
+  left: -9999px; }
+
+.hide {
+  display: none; }
+
+.show {
+  display: initial; }
+
+.invisible {
+  visibility: hidden; }
+
+.clear {
+  display: block;
+  clear: both; }
+
+.clear-after:after {
+  display: table;
+  clear: both;
+  content: ''; }
+
+.float-center {
+  display: block;
+  margin-right: auto;
+  margin-left: auto; }
+
+.float-left {
+  float: left; }
+
+.float-right {
+  float: right; }
+
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+.text-center {
+  text-align: center; }
+
+.text-justify {
+  text-align: justify; }
+
+@media (orientation: landscape) {
+  .show-for-landscape {
+    display: block; } }
+
+@media (orientation: portrait) {
+  .show-for-landscape {
+    display: none; } }
+
+@media (orientation: portrait) {
+  .show-for-portrait {
+    display: block; } }
+
+@media (orientation: landscape) {
+  .show-for-portrait {
+    display: none; } }
+
+@media (orientation: landscape) {
+  .hide-for-landscape {
+    display: none; } }
+
+@media (orientation: portrait) {
+  .hide-for-landscape {
+    display: block; } }
+
+@media (orientation: portrait) {
+  .hide-for-portrait {
+    display: none; } }
+
+@media (orientation: landscape) {
+  .hide-for-portrait {
+    display: block; } }
+
+@media (min-width: 640px) {
+  .show-for-small-only {
+    display: none; } }
+
+@media (min-width: 0) and (max-width: 639px) {
+  .show-for-medium-only {
+    display: none; } }
+
+@media (min-width: 1024px) {
+  .show-for-medium-only {
+    display: none; } }
+
+.show-for-large-only {
+  display: none; }
+
+@media (min-width: 1024px) and (max-width: 1340px) {
+  .show-for-large-only {
+    display: block; } }
+
+@media (min-width: 1341px) {
+  .show-for-large-only {
+    display: none; } }
+
+.show-for-xlarge-only {
+  display: none; }
+
+@media (min-width: 1341px) and (max-width: 1399px) {
+  .show-for-xlarge-only {
+    display: block; } }
+
+@media (min-width: 1400px) {
+  .show-for-xlarge-only {
+    display: none; } }
+
+.show-for-xxlarge-only {
+  display: none; }
+
+@media (min-width: 1400px) {
+  .show-for-xxlarge-only {
+    display: none; } }
+
+.show-for-medium-up {
+  display: none; }
+
+@media (min-width: 640px) {
+  .show-for-medium-up {
+    display: block; } }
+
+.show-for-large-up {
+  display: none; }
+
+@media (min-width: 1024px) {
+  .show-for-large-up {
+    display: block; } }
+
+.show-for-xlarge-up {
+  display: none; }
+
+@media (min-width: 1341px) {
+  .show-for-xlarge-up {
+    display: block; } }
+
+.show-for-xxlarge-up {
+  display: none; }
+
+@media (min-width: 1400px) {
+  .show-for-xxlarge-up {
+    display: block; } }
+
+@media (min-width: 0) and (max-width: 639px) {
+  .hide-for-small-only {
+    display: none; } }
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .hide-for-medium-only {
+    display: none; } }
+
+@media (min-width: 1024px) and (max-width: 1340px) {
+  .hide-for-large-only {
+    display: none; } }
+
+@media (min-width: 1341px) and (max-width: 1399px) {
+  .hide-for-xlarge-only {
+    display: none; } }
+
+@media (min-width: 1400px) {
+  .hide-for-xxlarge-only {
+    display: none; } }
+
+@media (min-width: 640px) {
+  .hide-for-medium-up {
+    display: none; } }
+
+@media (min-width: 1024px) {
+  .hide-for-large-up {
+    display: none; } }
+
+@media (min-width: 1341px) {
+  .hide-for-xlarge-up {
+    display: none; } }
+
+@media (min-width: 1400px) {
+  .hide-for-xxlarge-up {
+    display: none; } }
+
+/*# sourceMappingURL=homepage.css.map */

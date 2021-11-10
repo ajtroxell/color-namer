@@ -1,0 +1,143 @@
+<!doctype html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" >
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+		<title>
+		WS Starter | LRS Web Solutions - Springfield, IL
+		</title>
+		<link rel="author" href="humans.txt"/>
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="assets/dist/css/main.css"/>
+		<!--[if lt IE 9]>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+		<![endif]-->
+		<!-- Fav and touch icons -->
+		<link rel="apple-touch-icon" sizes="144x144" href="assets/dist/images/icons/apple-touch-icon-144-precomposed.png"/>
+		<link rel="apple-touch-icon" sizes="114x114" href="assets/dist/images/icons/apple-touch-icon-114-precomposed.png"/>
+		<link rel="apple-touch-icon" sizes="72x72" href="assets/dist/images/icons/apple-touch-icon-72-precomposed.png"/>
+		<link rel="apple-touch-icon" href="assets/dist/images/icons/apple-touch-icon-57-precomposed.png"/>
+		<link rel="shortcut icon" href="assets/dist/images/icons/favicon.png"/>
+		<meta name="application-name" content="WS Starter"/>
+		<meta name="msapplication-tooltip" content="WS Starter"/>
+		<meta name="msapplication-TileImage" content="assets/dist/images/icons/windows-144.png"/>
+		<meta name="msapplication-TileColor" content="#FFFFFF"/>
+	</head>
+	<body>
+		<!--[if lte IE 9]>
+			<div class="is-bar">
+					<p>You are using an unsupported browser. Some web functions may not work correctly. <span><a href="http://browsehappy.com/" target="_blank">Please update your browser for the best user experience</a></span></p>
+			</div>
+		<![endif]-->
+
+<div class="quiz">
+  <div class="question">
+    <p>Are you a woman who had gestational diabetes, had a baby weighing 9 or more pounds at birth, has a history of infertility or polycystic ovarian syndrome (PCOS)?</p>
+    <ul>
+      <li data-points="1"><a>Yes <span><i class="fa fa-arrow-right">&nbsp;</i></span></a></li>
+      <li data-points="0"><a>No <span><i class="fa fa-arrow-right">&nbsp;</i></span></a></li>
+    </ul>
+  </div>
+  <div class="question">
+  	<a class="back"><i class="fa fa-arrow-left"></i> Start Over</a>
+    <p>Do you have a sister or brother with diabetes?</p>
+    <ul>
+      <li data-points="1"><a>Yes <span><i class="fa fa-arrow-right">&nbsp;</i></span></a></li>
+      <li data-points="0"><a>No <span><i class="fa fa-arrow-right">&nbsp;</i></span></a></li>
+    </ul>
+  </div>
+  <div class="question">
+  	<a class="back"><i class="fa fa-arrow-left"></i> Start Over</a>
+    <p>Do you have a parent with diabetes?</p>
+    <ul>
+      <li data-points="1"><a>Yes <span><i class="fa fa-arrow-right">&nbsp;</i></span></a></li>
+      <li data-points="0"><a>No <span><i class="fa fa-arrow-right">&nbsp;</i></span></a></li>
+    </ul>
+  </div>
+  <div class="question">
+  	<a class="back"><i class="fa fa-arrow-left"></i> Start Over</a>
+    <p>Find your height on the chart on the below. Do you weigh as much as or more than the weight listed for your height?</p>
+    <ul>
+      <li data-points="5"><a>Yes <span><i class="fa fa-arrow-right">&nbsp;</i></span></a></li>
+      <li data-points="0"><a>No <span><i class="fa fa-arrow-right">&nbsp;</i></span></a></li>
+    </ul>
+  </div>
+  <div class="question">
+  	<a class="back"><i class="fa fa-arrow-left"></i> Start Over</a>
+    <p>Are you younger than 65 years of age and get little or no exercise in a typical day?</p>
+    <ul>
+      <li data-points="5"><a>Yes <span><i class="fa fa-arrow-right">&nbsp;</i></span></a></li>
+      <li data-points="0"><a>No <span><i class="fa fa-arrow-right">&nbsp;</i></span></a></li>
+    </ul>
+  </div>
+  <div class="question">
+  	<a class="back"><i class="fa fa-arrow-left"></i> Start Over</a>
+    <p>Are you between 45 and 64 years of age?</p>
+    <ul>
+      <li data-points="5"><a>Yes <span><i class="fa fa-arrow-right">&nbsp;</i></span></a></li>
+      <li data-points="0"><a>No <span><i class="fa fa-arrow-right">&nbsp;</i></span></a></li>
+    </ul>
+  </div>
+  <div class="question">
+  	<a class="back"><i class="fa fa-arrow-left"></i> Start Over</a>
+    <p>Are you 65 years of age or older? </p>
+    <ul>
+      <li data-points="9"><a>Yes <span><i class="fa fa-arrow-right">&nbsp;</i></span></a></li>
+      <li data-points="0"><a>No <span><i class="fa fa-arrow-right">&nbsp;</i></span></a></li>
+    </ul>
+  </div>
+  <div class="results">
+    <p class="results-score">Your score is: <span data-score></span></p>
+    <p class="high-risk">You have a <strong>high risk</strong> of having prediabetes/diabetes. Please bring this form to your health provider to discuss your risk.</p>
+    <p class="low-risk">At present, you have a <strong>low to moderate risk</strong> for having prediabetes/diabetes. Discuss any concerns with your health care provider at your next appointment.</p>
+    <p class="no-risk">You are not at risk of having prediabetes/diabetes.</p>
+  </div>
+</div>
+
+		<!-- Vendor JS -->
+		<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
+		<script src="//code.jquery.com/jquery-latest.min.js"></script>
+		<!-- LRS JS -->
+		<script src="assets/dist/js/main.js"></script>
+		<script>
+			var score = 0;
+			var totalScore = 0;
+			$('.question').each(function () {
+				var question = $(this);
+				$('li', this).on('click', function () {
+					if (question.next('.results').length) {
+						question.hide();
+						$('.results').show();
+						$('[data-score]').append(totalScore);
+						if (totalScore >= 3 && totalScore <= 8) {
+							$('.low-risk').show();
+						} else if (totalScore >= 9) {
+							$('.high-risk').show();
+						} else {
+							$('.no-risk').show();
+						}
+					}
+					else {
+						var points = $(this).data('points');
+						// score = points;
+						// totalScore = score + points;
+						// console.log(totalScore);
+						totalScore = score+points;
+						score = totalScore
+						console.log(totalScore);
+						question.hide();
+						question.next('.question').show();
+					}
+				});
+			})
+			$('.question .back').on('click', function() {
+				score = 0;
+				totalScore = 0;
+				$('.question').not(':first').hide();
+				$('.question:first').show();
+				$('.results, .high-risk, .low-risk, .no-risk').hide();
+			});
+		</script>
+	</body>
+</html>
